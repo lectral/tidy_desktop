@@ -1,0 +1,5 @@
+#!/usr/local/bin/ruby -w
+require "tidy_desktop"
+
+TidyDesktop::App.new.run
+

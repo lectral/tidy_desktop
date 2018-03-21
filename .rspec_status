@@ -1,0 +1,22 @@
+example_id                        | status | run_time        |
+--------------------------------- | ------ | --------------- |
+./spec/cleaner_spec.rb[1:1]       | passed | 0.00176 seconds |
+./spec/cleaner_spec.rb[1:2]       | passed | 0.00133 seconds |
+./spec/cleaner_spec.rb[1:3]       | passed | 0.00118 seconds |
+./spec/cleaner_spec.rb[1:4]       | passed | 0.0039 seconds  |
+./spec/cleaner_spec.rb[1:5]       | passed | 0.00147 seconds |
+./spec/cleaner_spec.rb[1:6]       | passed | 0.00151 seconds |
+./spec/cleaner_spec.rb[1:7]       | passed | 0.00092 seconds |
+./spec/configuration_spec.rb[1:1] | passed | 0.00031 seconds |
+./spec/configuration_spec.rb[1:2] | passed | 0.00115 seconds |
+./spec/configuration_spec.rb[1:3] | passed | 0.00184 seconds |
+./spec/configuration_spec.rb[1:4] | passed | 0.00097 seconds |
+./spec/configuration_spec.rb[1:5] | passed | 0.00035 seconds |
+./spec/configuration_spec.rb[1:6] | passed | 0.00096 seconds |
+./spec/configuration_spec.rb[1:7] | passed | 0.00055 seconds |
+./spec/configuration_spec.rb[1:8] | passed | 0.00039 seconds |
+./spec/cron_spec.rb[1:1]          | passed | 0.00012 seconds |
+./spec/cron_spec.rb[1:2]          | passed | 0.00007 seconds |
+./spec/cron_spec.rb[1:3]          | passed | 0.01326 seconds |
+./spec/cron_spec.rb[1:4]          | passed | 0.01606 seconds |
+./spec/tidy_desktop_spec.rb[1:1]  | passed | 0.00007 seconds |
