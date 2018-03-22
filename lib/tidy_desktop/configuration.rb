@@ -1,13 +1,20 @@
 module TidyDesktop
   # Loads and saves user configuration
   class Configuration
-    def initialize
+    def initialize(path)
+      @path = path
       @contents = ''
     end
 
-    def load_from_file(file)
-      @contents = File.read(file)
+    def load(file)
+      if(exist?)
+        @contents = File.read(file)
+      end
       parse
+    end
+
+    def exist?
+      @path.exist?
     end
 
     def load_from_string(string)
@@ -15,8 +22,8 @@ module TidyDesktop
       parse
     end
 
-    def create_default(options, path)
-      File.write(path, options.to_yaml)
+    def create_default(options)
+      File.write(@path, options.to_yaml)
     end
 
     def loaded?
