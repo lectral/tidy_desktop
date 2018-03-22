@@ -6,6 +6,7 @@ RSpec.describe TidyDesktop::Configuration do
   
 
   let :configuration { TidyDesktop::Configuration.new(@temp_conf)} 
+
   after(:each) do
     FileUtils.rm_rf @tmp_dir
   end

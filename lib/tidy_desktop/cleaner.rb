@@ -8,7 +8,9 @@ module TidyDesktop
     end
 
     def clean!(src, target)
+      puts "aaa"
       Pathname.glob("#{src.expand_path}/*") do |path|
+        puts "aaa"
         process_file_or_dir path, target
       end
     end
@@ -28,8 +30,8 @@ module TidyDesktop
 
     def move_file_or_dir(from, to)
       full_directory = to.join(@daily_directory)
-      FileUtils.mkdir_p full_directory
-      FileUtils.mv from, full_directory
+      FileUtils.mkdir_p full_directory.expand_path
+      FileUtils.mv from.expand_path, full_directory.expand_path
     end
 
     def today_file(path)

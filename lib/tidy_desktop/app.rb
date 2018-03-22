@@ -8,16 +8,16 @@ module TidyDesktop
       command_line = CommandLine.new
       command_line.on_install { install }
       command_line.on_uninstall { uninstall }
-      command_line.on_run { run }
+      command_line.on_run { clean }
       command_line.parse
     end
 
     private
 
     def clean
-      @configuration = Configuration.new(CONFIGURATION_FILE_PATH)
+      @configuration = Configuration.new(expanded_configuration_file_path)
       if @configuration.exist?
-        @configuration.load_from_file
+        @configuration.load
         cleaner = Cleaner.new(@configuration.ignore)
         cleaner.clean!(@configuration.directory, @configuration.target)
       else
@@ -36,6 +36,7 @@ module TidyDesktop
         create_configuration
       end
     end
+
 
     def install_crontab
       @configuration.load(CONFIGURATION_FILE_PATH)

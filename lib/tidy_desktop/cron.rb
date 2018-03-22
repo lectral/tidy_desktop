@@ -12,12 +12,12 @@ module TidyDesktop
 
     def uninstall!
       crontab = current_crontab.delete_if { |a| a.include? @command.to_s }
-      save_cron(crontab.join("\n"), 'r+')
+      save_cron(crontab.join, 'r+')
     end
 
     def install!
       o = current_crontab.push(output)
-      save_cron(o.join("\n"), 'r+')
+      save_cron(o.join, 'r+')
     end
 
     def installed?

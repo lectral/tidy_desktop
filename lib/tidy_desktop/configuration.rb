@@ -6,11 +6,11 @@ module TidyDesktop
       @contents = ''
     end
 
-    def load(file)
+    def load
       if(exist?)
-        @contents = File.read(file)
+        @contents = File.read(@path)
+        parse
       end
-      parse
     end
 
     def exist?
